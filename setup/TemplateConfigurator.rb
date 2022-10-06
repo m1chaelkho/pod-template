@@ -70,20 +70,13 @@ module Pod
     def run
       @message_bank.welcome_message
 
-      platform = self.ask_with_answers("What platform do you want to use?", ["iOS", "macOS"]).to_sym
+      framework = self.ask_with_answers("What language do you want to use?", ["Swift", "ObjC"]).to_sym
+      case framework
+        when :swift
+          ConfigureSwift.perform(configurator: self)
 
-      case platform
-        when :macos
-          ConfigureMacOSSwift.perform(configurator: self)
-        when :ios
-          framework = self.ask_with_answers("What language do you want to use?", ["Swift", "ObjC"]).to_sym
-          case framework
-            when :swift
-              ConfigureSwift.perform(configurator: self)
-
-            when :objc
-              ConfigureIOS.perform(configurator: self)
-          end
+        when :objc
+          ConfigureIOS.perform(configurator: self)
       end
 
       replace_variables_in_files
@@ -91,9 +84,6 @@ module Pod
       rename_template_files
       add_pods_to_podfile
       customise_prefix
-      rename_classes_folder
-      ensure_carthage_compatibility
-      reinitialize_git_repo
       run_pod_install
 
       @message_bank.farewell_message
@@ -101,24 +91,15 @@ module Pod
 
     #----------------------------------------#
 
-    def ensure_carthage_compatibility
-      FileUtils.ln_s('Example/Pods/Pods.xcodeproj', '_Pods.xcodeproj')
-    end
-
     def run_pod_install
       puts "\nRunning " + "pod install".magenta + " on your new library."
       puts ""
 
-      Dir.chdir("Example") do
-        system "pod install"
-      end
-
-      `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
-      `git commit -m "Initial commit"`
+      system "pod install"
     end
 
     def clean_template_files
-      ["./**/.gitkeep", "configure", "_CONFIGURE.rb", "README.md", "LICENSE", "templates", "setup", "CODE_OF_CONDUCT.md"].each do |asset|
+      ["./**/.gitkeep", ".git", "configure", "_CONFIGURE.rb", "templates", "setup"].each do |asset|
         `rm -rf #{asset}`
       end
     end
@@ -155,7 +136,7 @@ module Pod
     end
 
     def customise_prefix
-      prefix_path = "Example/Tests/Tests-Prefix.pch"
+      prefix_path = "Tests/Tests-Prefix.pch"
       return unless File.exists? prefix_path
 
       pch = File.read prefix_path
@@ -165,26 +146,14 @@ module Pod
 
     def set_test_framework(test_type, extension, folder)
       content_path = "setup/test_examples/" + test_type + "." + extension
-      tests_path = "templates/" + folder + "/Example/Tests/Tests." + extension
+      tests_path = "templates/" + folder + "/Tests/Tests." + extension
       tests = File.read tests_path
       tests.gsub!("${TEST_EXAMPLE}", File.read(content_path) )
       File.open(tests_path, "w") { |file| file.puts tests }
     end
 
     def rename_template_files
-      FileUtils.mv "POD_README.md", "README.md"
-      FileUtils.mv "POD_LICENSE", "LICENSE"
       FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
-    end
-
-    def rename_classes_folder
-      FileUtils.mv "Pod", @pod_name
-    end
-
-    def reinitialize_git_repo
-      `rm -rf .git`
-      `git init`
-      `git add -A`
     end
 
     def validate_user_details
@@ -216,7 +185,7 @@ module Pod
     end
 
     def podfile_path
-      'Example/Podfile'
+      'Podfile'
     end
 
     #----------------------------------------#
