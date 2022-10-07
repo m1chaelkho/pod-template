@@ -36,7 +36,7 @@ TODO: Add long description of the pod here.
     '${POD_NAME}Resources' => ['${POD_NAME}/**/*.xib',
                                '${POD_NAME}Resources/**/*.xib',
                                '${POD_NAME}Resources/Images.xcassets']
-}
+  }
 
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
