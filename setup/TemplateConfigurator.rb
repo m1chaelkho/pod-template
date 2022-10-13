@@ -68,7 +68,6 @@ module Pod
     end
 
     def run
-      @message_bank.welcome_message
       ConfigureSwift.perform(configurator: self)
 
       replace_variables_in_files
