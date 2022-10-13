@@ -27,9 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C3F19C328F8DD0000E918FF /* PROJECT-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PROJECT-Info.plist"; sourceTree = "<group>"; };
 		B1B16EFD24165E6E0057E2A7 /* PROJECT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PROJECT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B16F0024165E6E0057E2A7 /* PROJECT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PROJECT.h; sourceTree = "<group>"; };
-		B1B16F0124165E6E0057E2A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1B16F0624165E6E0057E2A7 /* PROJECTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B16F2024165ED50057E2A7 /* SandboxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandboxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B16F2224165ED50057E2A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 		B1B16EFF24165E6E0057E2A7 /* PROJECT */ = {
 			isa = PBXGroup;
 			children = (
+				4C3F19C328F8DD0000E918FF /* PROJECT-Info.plist */,
 				B1B16F0024165E6E0057E2A7 /* PROJECT.h */,
-				B1B16F0124165E6E0057E2A7 /* Info.plist */,
 			);
 			path = PROJECT;
 			sourceTree = "<group>";
