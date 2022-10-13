@@ -24,9 +24,6 @@ module Pod
       }).run
 
       `mv ./templates/swift/* ./`
-
-      # remove podspec for osx
-      `rm ./NAME-osx.podspec`
     end
   end
 
