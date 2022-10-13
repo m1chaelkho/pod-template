@@ -12,6 +12,7 @@ module Pod
     end
 
     def perform
+      keep_demo = :yes
       configurator.set_test_framework "xctest", "swift", "swift"
 
       Pod::ProjectManipulator.new({
