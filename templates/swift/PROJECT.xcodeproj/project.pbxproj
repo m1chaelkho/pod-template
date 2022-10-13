@@ -29,7 +29,7 @@
 /* Begin PBXFileReference section */
 		B1B16EFD24165E6E0057E2A7 /* PROJECT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PROJECT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B16F0024165E6E0057E2A7 /* PROJECT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PROJECT.h; sourceTree = "<group>"; };
-		B1B16F0124165E6E0057E2A7 /* PROJECT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PROJECT-Info.plist"; sourceTree = "<group>"; };
+		B1B16F0124165E6E0057E2A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1B16F0624165E6E0057E2A7 /* PROJECTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B16F2024165ED50057E2A7 /* SandboxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandboxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B16F2224165ED50057E2A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,9 +37,9 @@
 		B1B16F2E24165ED60057E2A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1B16F3024165ED60057E2A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1B16F35241660390057E2A7 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		B1B16F36241660390057E2A7 /* PROJECT-Test-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PROJECT-Test-Info.plist"; sourceTree = "<group>"; };
+		B1B16F36241660390057E2A7 /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		B1C111D5241F5F630067A7C7 /* PROJECTResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1C111D7241F5F630067A7C7 /* PROJECT-Resources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PROJECT-Resources-Info.plist"; sourceTree = "<group>"; };
+		B1C111D7241F5F630067A7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1C111DB241F5F710067A7C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B1B16F0024165E6E0057E2A7 /* PROJECT.h */,
-				B1B16F0124165E6E0057E2A7 /* PROJECT-Info.plist */,
+				B1B16F0124165E6E0057E2A7 /* Info.plist */,
 			);
 			path = PROJECT;
 			sourceTree = "<group>";
@@ -123,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				B1B16F35241660390057E2A7 /* Tests.swift */,
-				B1B16F36241660390057E2A7 /* PROJECT-Test-Info.plist */,
+				B1B16F36241660390057E2A7 /* info.plist */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -138,7 +138,7 @@
 		B1C111D6241F5F630067A7C7 /* PROJECTResources */ = {
 			isa = PBXGroup;
 			children = (
-				B1C111D7241F5F630067A7C7 /* PROJECT-Resources-Info.plist */,
+				B1C111D7241F5F630067A7C7 /* Info.plist */,
 				B1C111DB241F5F710067A7C7 /* Images.xcassets */,
 			);
 			path = PROJECTResources;
