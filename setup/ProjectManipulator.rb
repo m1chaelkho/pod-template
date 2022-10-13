@@ -93,6 +93,7 @@ RUBY
 
       # rename umbrella header
       File.rename(project_folder + "/PROJECT/PROJECT.h", project_folder + "/PROJECT/" + @configurator.pod_name + ".h")
+      File.rename(project_folder + "/PROJECT/PROJECT-info.plist", project_folder + "/PROJECT/" + @configurator.pod_name + "-info.plist")
 
     end
 

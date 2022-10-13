@@ -1,3 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '13.0'
+use_frameworks!
+inhibit_all_warnings!
+
 def module_dependency_pod
   #insert pod here if needed
 end

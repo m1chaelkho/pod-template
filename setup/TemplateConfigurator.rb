@@ -69,15 +69,7 @@ module Pod
 
     def run
       @message_bank.welcome_message
-
-      framework = self.ask_with_answers("What language do you want to use?", ["Swift", "ObjC"]).to_sym
-      case framework
-        when :swift
-          ConfigureSwift.perform(configurator: self)
-
-        when :objc
-          ConfigureIOS.perform(configurator: self)
-      end
+      ConfigureSwift.perform(configurator: self)
 
       replace_variables_in_files
       clean_template_files
@@ -142,14 +134,6 @@ module Pod
       pch = File.read prefix_path
       pch.gsub!("${INCLUDED_PREFIXES}", @prefixes.join("\n  ") )
       File.open(prefix_path, "w") { |file| file.puts pch }
-    end
-
-    def set_test_framework(test_type, extension, folder)
-      content_path = "setup/test_examples/" + test_type + "." + extension
-      tests_path = "templates/" + folder + "/Tests/Tests." + extension
-      tests = File.read tests_path
-      tests.gsub!("${TEST_EXAMPLE}", File.read(content_path) )
-      File.open(tests_path, "w") { |file| file.puts tests }
     end
 
     def rename_template_files
