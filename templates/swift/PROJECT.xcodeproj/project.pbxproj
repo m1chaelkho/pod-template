@@ -35,7 +35,7 @@
 		B1B16F2224165ED50057E2A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1B16F2624165ED50057E2A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1B16F2E24165ED60057E2A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B1B16F3024165ED60057E2A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B16F3024165ED60057E2A7 /* SandboxApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SandboxApp-Info.plist"; sourceTree = "<group>"; };
 		B1B16F35241660390057E2A7 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		B1B16F36241660390057E2A7 /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		B1C111D5241F5F630067A7C7 /* PROJECTResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +114,7 @@
 				B1B16F2224165ED50057E2A7 /* AppDelegate.swift */,
 				B1B16F2624165ED50057E2A7 /* ViewController.swift */,
 				B1B16F2D24165ED60057E2A7 /* LaunchScreen.storyboard */,
-				B1B16F3024165ED60057E2A7 /* Info.plist */,
+				B1B16F3024165ED60057E2A7 /* SandboxApp-Info.plist */,
 			);
 			path = SandboxApp;
 			sourceTree = "<group>";
@@ -562,7 +562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9FGKAP74Y;
-				INFOPLIST_FILE = SandboxApp/Info.plist;
+				INFOPLIST_FILE = "SandboxApp/SandboxApp-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,7 +579,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9FGKAP74Y;
-				INFOPLIST_FILE = SandboxApp/Info.plist;
+				INFOPLIST_FILE = "SandboxApp/SandboxApp-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
