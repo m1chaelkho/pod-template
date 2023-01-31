@@ -1,5 +1,7 @@
+require_relative '../../scripts/pod_post_install'
+
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '13.0'
+platform :ios, '12.0'
 use_frameworks! :linkage => :static
 inhibit_all_warnings!
 
@@ -23,4 +25,10 @@ target '${POD_NAME}' do
   target '${POD_NAME}Tests' do
     ${INCLUDED_PODS}
   end
+end
+
+post_install do |installer|
+  
+  # Add Exclude Arch for arm64
+  setup_pod_projects_build_config(installer)
 end
